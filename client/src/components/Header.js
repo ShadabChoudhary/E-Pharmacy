@@ -32,7 +32,7 @@ function Header() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [data]);
 
   const handleClick = async () => {
     const getData = await fetch("/api/logout");
