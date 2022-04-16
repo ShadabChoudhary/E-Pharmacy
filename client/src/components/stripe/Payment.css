@@ -1,7 +1,7 @@
-#root {
+/* #root {
   display: flex;
   align-items: center;
-}
+} */
 
 .Payment_container {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -14,7 +14,7 @@
   width: 100vw;
 }
 
-form {
+.pay_form {
   width: 30vw;
   min-width: 500px;
   align-self: center;
@@ -37,7 +37,7 @@ form {
 }
 
 /* Buttons and links */
-button {
+.pay_btn {
   background: #5469d4;
   font-family: Arial, sans-serif;
   color: #ffffff;
@@ -53,11 +53,11 @@ button {
   width: 100%;
 }
 
-button:hover {
+.pay_btn:hover {
   filter: contrast(115%);
 }
 
-button:disabled {
+.pay_btn:disabled {
   opacity: 0.5;
   cursor: default;
 }

@@ -40,9 +40,6 @@ class UserController {
       password: hashPass,
     });
 
-    // const token = jwt.sign({ id: userExist._id }, process.env.JWT_SECRETCODE, {
-    //   expiresIn: process.env.JWT_EXPIRE,
-    // });
     res.status(201).json({
       success: true,
       message: "Registered successfull",

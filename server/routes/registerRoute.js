@@ -18,12 +18,7 @@ router.get(
   authorizeRoles("admin"),
   UserController.getAllUsers
 );
-router.get(
-  "/admin/user/:id",
-  userAuth,
-  authorizeRoles("admin"),
-  UserController.getUserDetailAdmin
-);
+
 router.put(
   "/admin/user/:id",
   userAuth,

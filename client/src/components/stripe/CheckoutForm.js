@@ -79,9 +79,13 @@ export default function CheckoutForm() {
 
   return (
     <div className="Payment_container">
-      <form id="payment-form" onSubmit={handleSubmit}>
+      <form className="pay_form" id="payment-form" onSubmit={handleSubmit}>
         <PaymentElement id="payment-element" />
-        <button disabled={isLoading || !stripe || !elements} id="submit">
+        <button
+          className="pay_btn"
+          disabled={isLoading || !stripe || !elements}
+          id="submit"
+        >
           <span id="button-text">
             {isLoading ? (
               <div className="spinner" id="spinner"></div>

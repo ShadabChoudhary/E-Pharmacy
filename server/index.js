@@ -5,7 +5,6 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const web = require("./routes/web.js");
 const registerRoute = require("./routes/registerRoute.js");
-const order = require("./routes/orderRoutes.js");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
@@ -29,7 +28,6 @@ Connectdb(username, password);
 
 app.use("/api", web);
 app.use("/api", registerRoute);
-app.use("/api", order);
 
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join("client/build")));

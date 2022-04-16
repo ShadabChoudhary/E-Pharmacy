@@ -27,9 +27,6 @@ router.delete(
   StudentController.deleteProduct
 );
 router.get("/product/:id", StudentController.getProductDetails);
-router.put("/review", userAuth, StudentController.createProductReview);
-router.get("/reviews", StudentController.getProductReviews);
-router.delete("/reviews", userAuth, StudentController.deleteReviews);
 router.post("/payment/process", payment);
 
 module.exports = router;
