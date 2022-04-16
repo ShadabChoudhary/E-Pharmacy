@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Product_Dpt.css";
 import Header from "../components/Header.js";
+import Footer from "./Footer";
+import { cartContext } from "./Context/CartContext";
 
 function ProductDpt() {
+  const { cartDispatch } = useContext(cartContext);
   const location = useLocation();
-  console.log(location.state);
+  // console.log(location.state);
 
   const handleClick = (e) => {
     const imgURL = e.target.src;
     const img = document.querySelector(".main_thumbnail");
     img.src = imgURL;
   };
+
+  const AddToCart = () => {
+    cartDispatch({
+      type: "ADD_TO_CART",
+      cartItem: {
+        id: location.state._id,
+        title: location.state.name,
+        img: location.state.images[0].url,
+        price: location.state.price,
+      },
+    });
+  };
+
   return (
     <div className="description_container">
       <Header />
@@ -53,14 +69,18 @@ function ProductDpt() {
             ))}
           </div>
           <div className="btn_container">
-            <Link to="/product/:id">
+            <Link to="/checkout/payment">
               <button className="buy_btn ">Buy Now</button>
             </Link>
-
-            <button className="cart_btn">Add to Cart</button>
+            <Link to="/cart">
+              <button className="cart_btn" onClick={AddToCart}>
+                Add to Cart
+              </button>
+            </Link>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

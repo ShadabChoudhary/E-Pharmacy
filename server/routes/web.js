@@ -1,6 +1,7 @@
 const express = require("express");
 const StudentController = require("../controllers/studentcontroller.js");
 const { userAuth, authorizeRoles } = require("../middleware/adminAuth");
+const payment = require("../utils/payment.js");
 
 const router = express.Router();
 
@@ -29,5 +30,6 @@ router.get("/product/:id", StudentController.getProductDetails);
 router.put("/review", userAuth, StudentController.createProductReview);
 router.get("/reviews", StudentController.getProductReviews);
 router.delete("/reviews", userAuth, StudentController.deleteReviews);
+router.post("/payment/process", payment);
 
 module.exports = router;

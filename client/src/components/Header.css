@@ -1,30 +1,34 @@
 .nav-container {
   display: flex;
-  /* border: 2px solid black; */
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+}
+
+.main_logo {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .logo {
-  align-items: center;
-  margin: 0 50px 0 50px;
-  text-decoration: #ffffff;
-  color: #ffffff;
+  width: 35px;
+  object-fit: contain;
+}
+
+.main_logo > p {
+  font-size: 11px;
+  font-style: italic;
 }
 
 .search-panel {
   display: flex;
+  flex-direction: row-reverse;
   border: 2px solid white;
   background-color: #ffffff;
   border-radius: 10px;
   width: 100%;
-  align-items: center;
-  padding: 0 5px 0 5px;
-}
-
-.search-icon {
-  color: #1976d2;
 }
 
 .input-txt {
@@ -50,6 +54,15 @@
 
 .cart {
   margin-left: 5px;
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper p {
+  position: absolute;
+  bottom: -2px;
+  right: -15px;
 }
 
 .account-container {

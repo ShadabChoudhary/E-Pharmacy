@@ -1,20 +1,17 @@
-body {
+.home-container {
   background-color: #f3f3f3;
 }
-.home_container {
-  font-family: "LatoBold";
-}
+
 .banner-container {
   padding: 10px;
   background-color: #f3f3f3;
-  margin-top: 70px;
 }
 
 .banner > img {
   width: 100%;
 }
 
-.category-container {
+/* .category-container {
   padding: 0 10px 10px 10px;
   background-color: #f3f3f3;
 }
@@ -40,9 +37,9 @@ body {
   background-color: #ffffff;
   box-shadow: 0 6px 12px -4px rgb(40 11 18 / 10%);
   transition: 0.3s box-shadow;
-}
+} */
 
-.categoryImage:hover {
+/* .categoryImage:hover {
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.5);
 }
 
@@ -52,7 +49,7 @@ body {
 
 .categoryImage > span {
   font-size: 16px;
-}
+} */
 
 .ctg_title {
   margin: 15px 0 15px 10px;

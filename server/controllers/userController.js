@@ -3,7 +3,7 @@ const userMODEL = require("../model/userModel.js");
 const bcrypt = require("bcrypt");
 const sendMails = require("../utils/sendEmail.js");
 const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
+// const crypto = require("crypto");
 
 class UserController {
   static registration = catchAsyncError(async (req, res) => {

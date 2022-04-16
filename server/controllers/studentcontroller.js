@@ -52,12 +52,11 @@ class StudentController {
   });
 
   static getAllProducts = catchAsyncError(async (req, res) => {
-    const resultPerPage = 5;
-    const productCount = await ProductMODEL.countDocuments();
-    const apiFeature = new ApiFeatures(ProductMODEL.find(), req.query)
-      .search()
-      .filter()
-      .pagination(resultPerPage);
+    // const resultPerPage = 5;
+    // const productCount = await ProductMODEL.countDocuments();
+    const apiFeature = new ApiFeatures(ProductMODEL.find(), req.query).search();
+    // .filter()
+    // .pagination(resultPerPage);
     const products = await apiFeature.query;
 
     res.status(200).json({

@@ -3,6 +3,7 @@ import Header from "../components/Header.js";
 import Carousel from "react-material-ui-carousel";
 import "./Home.css";
 import Row from "./Row.js";
+import Footer from "./Footer.js";
 
 function Home() {
   return (
@@ -40,20 +41,21 @@ function Home() {
       </div>
       <div>
         <h1 className="ctg_title">Ayurvedic</h1>
-        <Row title="ayurvedic" category="ayurvedic" />
+        <Row title="ayurvedic" className="ctg_img" category="ayurvedic" />
       </div>
       <div>
         <h1 className="ctg_title">Covid Essentials</h1>
-        <Row category="covid essentials" />
+        <Row className="ctg_img" category="covid essentials" />
       </div>
       <div>
         <h1 className="ctg_title">Mom & Baby</h1>
-        <Row category="Mom & Baby" />
+        <Row className="ctg_img" category="Mom & Baby" />
       </div>
       <div>
         <h1 className="ctg_title">Mama Earth</h1>
-        <Row category="Mama earth" />
+        <Row className="ctg_img" category="Mama earth" />
       </div>
+      <Footer />
     </div>
   );
 }
